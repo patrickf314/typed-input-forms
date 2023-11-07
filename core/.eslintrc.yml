@@ -1,0 +1,52 @@
+env:
+  browser: true
+  es2021: true
+
+extends:
+  - eslint:recommended
+  - plugin:@typescript-eslint/recommended
+
+parser: '@typescript-eslint/parser'
+parserOptions:
+  project: ./tsconfig.json
+  ecmaFeatures:
+    jsx: true
+  ecmaVersion: 12
+  sourceType: module
+
+plugins:
+  - '@typescript-eslint'
+
+root: true
+
+ignorePatterns:
+  # ignore generated files
+  - /src/generated/**
+  - /test/**
+
+rules:
+  # for increased visibility
+  '@typescript-eslint/indent': off
+
+  # not needed because we handle errors at the top level
+  '@typescript-eslint/no-floating-promises': off
+
+  # Disabled because Sonar sometimes complains for 'redundant use of await on a return value'
+  '@typescript-eslint/promise-function-async': off
+
+  # remove weird function formatting
+  '@typescript-eslint/space-before-function-paren': off
+
+  # semicolons needed (also defined as sonar minors)
+  '@typescript-eslint/semi': off
+
+  '@typescript-eslint/strict-boolean-expressions': warn
+  '@typescript-eslint/prefer-nullish-coalescing': warn
+
+  'object-curly-spacing': off
+  '@typescript-eslint/member-delimiter-style': off
+  'no-multiple-empty-lines': off
+  'padded-blocks': off
+
+  # no console outputs
+  no-console: error

@@ -1,0 +1,36 @@
+{
+  "name": "typed-input-forms",
+  "version": "1.0.0",
+  "description": "The core module for typed input forms. This package contains the basic type definitions and class for input forms.",
+  "private": false,
+  "type": "module",
+  "keywords": [],
+  "scripts": {
+    "build": "npm run compile",
+    "compile": "rollup -c",
+    "watch": "rollup -cw",
+    "lint": "eslint --ext .ts,.tsx src/",
+    "test": "jest"
+  },
+  "files": [
+    "./out/esm/*"
+  ],
+  "devDependencies": {
+    "@jest/globals": "^29.5.0",
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "eslint": "^8.48.0",
+    "glob": "^9.1.0",
+    "jest": "^29.5.0",
+    "rollup": "^3.17.3",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.0.3"
+  },
+  "volta": {
+    "node": "18.15.0",
+    "npm": "9.6.2"
+  }
+}
